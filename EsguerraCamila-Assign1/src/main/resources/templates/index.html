@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--  properly include the thymeleaf-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/general.html :: headerFiles">
+</head>
+<header th:insert="/fragments/general.html :: header"> </header>
+
+<body>
+	<h3>Welcome to the Product Catalog Managment!</h3>
+	<p>This app is designed to enter product information.</p>
+	<p>If you wish to submit yours, please continue on the</p>
+	<p>next page by clicking into the button</p>
+
+	<!-- this line takes the user to the data input of the product -->
+
+	<a href="/DataInput">
+	<button type="button" value="Go to input">Click me</button>
+	</a>
+
+	<!-- <div th:replace="/fragments/general.html :: footer"></div> -->
+	<div th:replace="/fragments/general.html :: footer"></div>
+</body>
+</html>

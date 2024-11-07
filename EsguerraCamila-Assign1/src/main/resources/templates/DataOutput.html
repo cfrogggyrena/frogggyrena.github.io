@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/general.html :: headerFiles">
+</head>
+<header th:insert="/fragments/general.html :: header"> </header>
+<body>
+
+	<table>
+		<tr>
+			<th>PorductName</th>
+			<th>ProductCode</th>
+			<th>ProductBrand</th>
+			<th>QuantityPerUnit</th>
+			<th>ProductPrice</th>
+		</tr>
+		<tr th:each="aCatalog:${catalogs}">
+			<td th:text="${aCatalog.productName}"></td>
+			<td th:text="${aCatalog.productCode}"></td>
+			<td th:text="${aCatalog.productBrand}"></td>
+			<td th:text="${aCatalog.productQuant}"></td>
+			<td th:text="${aCatalog.productPrice}"></td>
+		</tr>
+	</table>
+	<p>
+		To go to the home page, please click <a href="/index"> Home </a>
+	</p>
+	<div th:replace="/fragments/general.html :: footer"></div>
+</body>
+</html>
